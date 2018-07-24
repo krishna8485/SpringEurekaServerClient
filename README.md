@@ -2,7 +2,7 @@ Simple example of a Spring Cloud / Spring Boot app using Netflix Eureka discover
 
 Example consists of 3 Spring Boot apps:
 
-SpringCloudEureka: registers the Eureka server
+SpringCloudEureka: registers the Eureka server (http://localhost:8761/)
 
 SpringBootService1 with endpoint POST /service1/singleService1/
 
