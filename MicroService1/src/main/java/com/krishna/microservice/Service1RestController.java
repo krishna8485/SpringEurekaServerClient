@@ -21,9 +21,13 @@ public class Service1RestController {
 	@Autowired
     private RestTemplate restTemplate;
 	
-	@GetMapping(value = "/hello", produces = "application/json")
-	public ResponseEntity<String> example1(){
-		return this.restTemplate.getForEntity("http://service2/hi", String.class);	
+	@GetMapping(value = "/singleService1", produces = "application/json")
+	public String singleService1(){
+		return "hi from singleService1";
+	}
+	@GetMapping(value = "/multiService1", produces = "application/json")
+	public ResponseEntity<String> multiService1(){
+		return this.restTemplate.getForEntity("http://service2/singleService2", String.class);	
 	}
 	
 }
